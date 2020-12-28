@@ -20,14 +20,8 @@ sumaruno = ( numero ) => {
 
  
 
-sumaruno(5).then((nueroNuevo)=>{
-    console.log(nueroNuevo);
-    return (sumaruno(nueroNuevo));
-})
-.then( nueroNuevo =>{
-    console.log('dos = ' + nueroNuevo);
-    return (sumaruno(nueroNuevo));
-})
+sumaruno(5).then(sumaruno)
+.then( sumaruno)
 .then(nueroNuevo => {
     console.log('tres' + nueroNuevo);
 })
